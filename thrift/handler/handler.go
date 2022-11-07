@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"SSP_Project/gen-go/tutorial"
+	"SSP_Project/thrift/gen-go/tutorial"
 	"context"
 	"fmt"
 )
