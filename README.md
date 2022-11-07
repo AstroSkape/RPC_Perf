@@ -7,8 +7,14 @@ Server coded in golang, client in python
 ```
 go mod tidy
 cd thrift
-go run main.go -> to run server 
-python client.py -> to run client
+thrift --gen go mult.thrift 
+thrift --gen py mult.thrift 
+go run main.go 
+
+source venv/bin/activate
+virtualenv venv
+source venv/bin/activate
+python client.py 
 ```
 
 ### Run the following to run grpc:
@@ -17,4 +23,7 @@ python client.py -> to run client
 cd grpc 
 python -m grpc_tools.protoc --proto_path=. ./mult.proto --python_out=./client --grpc_python_out=./client 
 protoc --go_out=plugins=grpc:calc mult.proto 
+
+go run server/main.go
+python client/client.py
 ```
