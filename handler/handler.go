@@ -1,9 +1,9 @@
 package handler
 
 import (
+	"SSP_Project/gen-go/tutorial"
 	"context"
 	"fmt"
-	"thrift_go/gen-go/tutorial"
 )
 
 type Handler struct{}

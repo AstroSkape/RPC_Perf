@@ -1,4 +1,4 @@
-module thrift_go
+module SSP_Project
 
 go 1.19
 

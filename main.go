@@ -1,10 +1,10 @@
 package main
 
 import (
+	"SSP_Project/gen-go/tutorial"
+	"SSP_Project/handler"
 	"flag"
 	"log"
-	"thrift_go/gen-go/tutorial"
-	"thrift_go/handler"
 
 	"github.com/apache/thrift/lib/go/thrift"
 )
