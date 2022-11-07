@@ -1,6 +1,8 @@
 # SSP_Project
 
-### Run the following:
+Server coded in golang, client in python
+
+### Run the following to run thrift:
 
 ```
 go mod tidy
@@ -8,6 +10,8 @@ cd thrift
 go run main.go -> to run server 
 python client.py -> to run client
 ```
+
+### Run the following to run grpc:
 
 ```
 cd grpc 
