@@ -1,4 +1,4 @@
-# SSP_Project
+# RPC Performance Comparison 
 
 Server coded in golang, client in python
 
