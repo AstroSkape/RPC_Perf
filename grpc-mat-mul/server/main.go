@@ -10,7 +10,7 @@ import (
 	"strings"
 	
 
-	pb "SSP_Project/grpc2/calc"
+	pb "SSP_Project/grpc-mat-mul/calc"
 
 	"google.golang.org/grpc"
 )
@@ -70,10 +70,10 @@ func (s *server) Multiply(ctx context.Context, in *pb.CalcRequest) (*pb.CalcRepl
 	fmt.Print("In Multiply...\n")
 	M1 := decode(in.Mat1);
 	M2 := decode(in.Mat2);
-	m1 := in.m1
-	m2 := in.m2
-	n1 := in.n1
-	n2 := in.n2
+	m1 := in.M1
+	_ = in.M2
+	n1 := in.N1
+	n2 := in.N2
 	
 	arr := make([][]int, int(m1));
 	for i := 0; i<int(m1); i++ {

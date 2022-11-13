@@ -1,8 +1,8 @@
 package main
 
 import (
-	"SSP_Project/thrift2/gen-go/tutorial"
-	"SSP_Project/thrift2/handler"
+	"SSP_Project/thrift-mat-mul/gen-go/tutorial"
+	"SSP_Project/thrift-mat-mul/handler"
 	"flag"
 	"log"
 

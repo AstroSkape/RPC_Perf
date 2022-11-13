@@ -1,5 +1,6 @@
 import logging
 
+import random
 import grpc
 import mult_pb2
 import mult_pb2_grpc
