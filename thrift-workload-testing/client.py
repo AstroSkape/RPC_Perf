@@ -50,7 +50,8 @@ client = MultiplicationService.Client(protocol)
 transport.open()
 
 def gen_load(step):
-	m2 = n2 = n1 = 1
+	m2 = 5
+	n2 = n1 = 5
 	m1 = 0
 	while True:
 		m1 += step
@@ -73,6 +74,6 @@ for m1, n1, m2, n2, s1, s2 in gen_load(10):
 	result = client.multiply(s1, s2, m1, n1, m2, n2)
 	end = timer()
 	delta = (end - start)
-	print(m1, delta)
+	print(m1, delta, m1*n1*n2)
 	# print(decode(result))
 
