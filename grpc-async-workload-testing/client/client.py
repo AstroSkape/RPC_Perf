@@ -1,5 +1,5 @@
 import logging
-
+import asyncio
 import random
 import grpc
 import mult_pb2
@@ -59,15 +59,15 @@ def gen_load(step):
 	
 def run():
 	print("Connecting ...")
-	with grpc.aio.insecure_channel('localhost:50051') as channel:
-		stub = mult_pb2_grpc.CalculatorStub(channel)
-		for m1, n1, m2, n2, s1, s2 in gen_load(10):	
-			start = timer()
-			response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=m1, n1=n1, m2=m2, n2=n2))
-			end = timer()
-			delta = (end - start)
-			print(m1, delta)
-			#print("Value received: ", decode(response.value))
+	channel =  grpc.aio.insecure_channel('localhost:50051')
+	stub = mult_pb2_grpc.CalculatorStub(channel)
+	for m1, n1, m2, n2, s1, s2 in gen_load(10):	
+		start = timer()
+		response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=m1, n1=n1, m2=m2, n2=n2))
+		end = timer()
+		delta = (end - start)
+		print(m1, delta)
+		#print("Value received: ", decode(response.value))
 
 
 if __name__ == '__main__':
