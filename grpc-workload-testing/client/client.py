@@ -37,9 +37,12 @@ def decode(s):
 	return arr
 
 def gen_load(step):
-	m2 = n2 = n1 = 1
+	m2 = 5
+	n2 = n1 = 5
 	m1 = 0
 	while True:
+		if m1==13200:
+			break
 		m1 += step
 		M1 = []
 		for i in range(m1):
@@ -66,7 +69,7 @@ def run():
 			response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=m1, n1=n1, m2=m2, n2=n2))
 			end = timer()
 			delta = (end - start)
-			print(m1, delta)
+			print(m1, delta, m1*n1*n2)
 			#print("Value received: ", decode(response.value))
 
 

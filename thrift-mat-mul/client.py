@@ -3,6 +3,9 @@ import uuid
 from datetime import datetime
 import random
 sys.path.append('gen-py')
+import psutil
+from vprof import runner
+import cProfile, pstats
 
 from thrift.transport import TSocket, TTransport
 from thrift.protocol import TBinaryProtocol
@@ -61,8 +64,27 @@ for i in range(m2):
 	M2.append([])
 	for j in range(n2):
 		M2[i].append(random.randint(1,99))
-		
-result = client.multiply(encode(M1, m1, n1), encode(M2, m2, n2), m1, n1, m2, n2)
 
-print(decode(result))
 
+
+def main():
+	#print('The CPU usage is: ', psutil.cpu_percent(1))
+	result = client.multiply(encode(M1, m1, n1), encode(M2, m2, n2), m1, n1, m2, n2)
+	#print('The CPU usage is: ', psutil.cpu_percent(1))
+	print("Payload size:", len(encode(M1, m1, n1))+len(encode(M2, m2, n2))+4*4)
+	print(decode(result))
+
+
+if __name__ == '__main__':
+	
+	#profiler = cProfile.Profile()
+	#profiler.enable()
+	main()
+	#profiler.disable()
+	#stats = pstats.Stats(profiler).sort_stats('cumtime')
+	#stats.print_stats()
+
+
+#print(decode(result))
+#vprof -c h client.py
+#runner.run(client.multiply, 'cmhp', args=(encode(M1, m1, n1), encode(M2, m2, n2), m1, n1, m2, n2), host='localhost', port=9091)
