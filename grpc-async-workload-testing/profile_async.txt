@@ -1,0 +1,27 @@
+Connecting ...
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 11:44:53  Samples:  517
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 0.598     CPU time: 0.598
+/   _/                      v4.4.0
+
+Program: client/client.py
+
+0.596 <module>  client.py:1
+├─ 0.554 run  client.py:76
+│  └─ 0.550 test_case  client.py:59
+│     ├─ 0.371 Random.randint  random.py:366
+│     │     [12 frames hidden]  random, ..
+│     │        0.321 Random.randrange  random.py:292
+│     ├─ 0.088 [self]  None
+│     ├─ 0.077 encode  client.py:9
+│     └─ 0.014 list.append  None
+│           [2 frames hidden]  ..
+├─ 0.020 <module>  asyncio/__init__.py:1
+│     [46 frames hidden]  asyncio, ssl, .., enum, collections, ...
+├─ 0.014 <module>  grpc/__init__.py:1
+│     [45 frames hidden]  grpc, abc, .., typing, six
+└─ 0.006 <module>  mult_pb2.py:1
+
+To view this report with different options, run:
+    pyinstrument --load-prev 2022-11-17T11-44-53 [options]
+

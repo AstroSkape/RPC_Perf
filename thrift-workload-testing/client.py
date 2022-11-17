@@ -6,7 +6,6 @@ sys.path.append('gen-py')
 from timeit import default_timer as timer
 
 
-
 from thrift.transport import TSocket, TTransport
 from thrift.protocol import TBinaryProtocol
 #from contact import ContactSvc, ttypes

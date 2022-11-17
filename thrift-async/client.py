@@ -10,18 +10,20 @@ from timeit import default_timer as timer
 mult_thrift = aiothrift.load('mult.thrift', module_name='mult_thrift')
 
 async def go():
-    conn = await aiothrift.create_connection(mult_thrift.MultiplicationService)
-    for m1, n1, m2, n2, s1, s2 in gen_load(10):	
-        start = timer()
-        result = await conn.multiply(s1, s2, m1, n1, m2, n2)
-        end = timer()
-        delta = (end - start)
-        print(m1, delta, m1*n1*n2)
+	conn = await aiothrift.create_connection(mult_thrift.MultiplicationService)
+	'''for m1, n1, m2, n2, s1, s2 in gen_load(10):	
+		start = timer()
+		result = await conn.multiply(s1, s2, m1, n1, m2, n2)
+		end = timer()
+		delta = (end - start)
+		print(m1, delta, m1*n1*n2)
+		print(result)
         #print(await conn.ping())
         #print(await conn.add(5, 6))
-        #print(await conn.multiply())
-    
-    conn.close()
+        #print(await conn.multiply())'''
+	result = await conn.multiply("a", "b", 1,2,3,4)
+	conn.close()
+
 
 
 def encode(arr, m, n):
@@ -59,6 +61,8 @@ def gen_load(step):
 	n2 = n1 = 5
 	m1 = 0
 	while True:
+		if m1 == 13200:
+			break
 		m1 += step
 		M1 = []
 		for i in range(m1):
