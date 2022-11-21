@@ -27,3 +27,11 @@ protoc --go_out=plugins=grpc:calc mult.proto
 go run server/main.go
 python client/client.py
 ```
+
+## Docker
+
+### Steps
+```
+cd thrift-docker
+docker-compose up --build --force-recreate
+```
