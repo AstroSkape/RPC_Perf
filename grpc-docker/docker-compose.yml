@@ -1,0 +1,21 @@
+services:
+  server:
+    build: ./server
+    hostname: server
+    ports:
+      - 9090:9090
+    networks:
+      grpc:
+        aliases:
+          - server
+  
+  client:
+    build: ./client
+    hostname: client
+    networks:
+      grpc:
+        aliases:
+          - client
+
+networks:
+  grpc:

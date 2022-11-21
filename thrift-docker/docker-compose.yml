@@ -14,8 +14,10 @@ services:
   client:
     build: ./client
     hostname: client
+    logging:
+      driver: "local"
     networks:
       thrift:
-    
+
 networks:
   thrift:
