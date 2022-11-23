@@ -13,7 +13,7 @@ RUN wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz 
 ENV PATH $PATH:/usr/local/go/bin
 
-RUN protoc --go_out=plugins=grpc:calc mult.proto
+RUN go mod tidy
 
 EXPOSE 50051
 

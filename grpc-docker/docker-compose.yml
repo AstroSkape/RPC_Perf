@@ -3,7 +3,7 @@ services:
     build: ./server
     hostname: server
     ports:
-      - 9090:9090
+      - 50051:50051
     networks:
       grpc:
         aliases:
