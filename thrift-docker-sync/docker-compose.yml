@@ -1,0 +1,21 @@
+version: '3.3'  # version of compose format
+
+services:
+  server:
+    build: ./server  # path is relative to docker-compose.yml location
+    hostname: server
+    ports:
+      - 9090:9090  # host:container
+    networks:
+      thrift:
+        aliases:
+          - server
+  
+  client:
+    build: ./client
+    hostname: client
+    networks:
+      thrift:
+
+networks:
+  thrift:
