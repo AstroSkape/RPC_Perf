@@ -41,7 +41,7 @@ def decode(s):
 		m+=1
 	return arr
 	
-socket = TSocket.TServerSocket('localhost', 9090)
+socket = TSocket.TServerSocket('server', 9090)
 transport = TTransport.TFramedTransport(socket)
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
 client = MultiplicationService.Client(protocol)

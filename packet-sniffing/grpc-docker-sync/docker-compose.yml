@@ -1,0 +1,21 @@
+services:
+  server:
+    build: ./server
+    hostname: server
+    ports:
+      - 50051:50051
+    networks:
+      packet-sniff:
+        aliases:
+          - server
+  
+  client:
+    build: ./client
+    hostname: client
+    networks:
+      packet-sniff:
+        aliases:
+          - client
+
+networks:
+  packet-sniff:

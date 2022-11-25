@@ -22,5 +22,5 @@ plt.legend(["gRPC", "thrift"])
 plt.xlabel("Payload size (Bytes)")
 plt.ylabel("Time to send out request (s)")
 
-#plt.savefig("rtt")
-plt.show()
+plt.savefig("rtt_async")
+#plt.show()

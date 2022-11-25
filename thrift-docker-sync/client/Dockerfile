@@ -37,9 +37,9 @@ RUN buildDeps=" \
 	&& rm -rf /tmp/* \
 	&& rm -rf /var/tmp/*
 
-COPY . . 
+COPY . /client
 
-WORKDIR .
+WORKDIR /client
 
 RUN pip install thrift
 

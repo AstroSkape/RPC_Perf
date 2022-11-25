@@ -75,7 +75,7 @@ def test_case(m1, m2, n1, n2):
 	
 def run():
 	print("Connecting ...")
-	channel =  grpc.aio.insecure_channel('localhost:50051')
+	channel =  grpc.aio.insecure_channel('172.17.0.2:50051')
 	stub = mult_pb2_grpc.CalculatorStub(channel)
 	for m1, n1, m2, n2, s1, s2 in gen_load(10):	
 		start = timer()
