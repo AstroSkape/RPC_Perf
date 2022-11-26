@@ -1,7 +1,7 @@
-import asyncio
-import aiothrift
+import thriftpy2
+from thriftpy2.rpc import make_server
 
-mult_thrift = aiothrift.load('mult.thrift', module_name='mult_thrift')
+mult_thrift = thriftpy2.load('mult.thrift', module_name='mult_thrift')
 
 class Dispatcher:
     def encode(self, arr, m, n):
@@ -34,11 +34,9 @@ class Dispatcher:
             m+=1
         return arr
     
-    async def multiply(self, A, B, m1, n1, m2, n2):
+    def multiply(self, A, B, m1, n1, m2, n2):
         M1 = self.decode(A)
         M2 = self.decode(B)
-        
-        await asyncio.sleep(0.001)
 
         arr = [[sum(a * b for a, b in zip(A_row, B_col))
                         for B_col in zip(*M2)]
@@ -46,9 +44,8 @@ class Dispatcher:
 
         return self.encode(arr, int(m1), int(n2))
 
-async def main():
-  server = await aiothrift.create_server(mult_thrift.MultiplicationService, Dispatcher())
-  async with server:
-      await server.serve_forever()
+def main():
+  server = make_server(mult_thrift.MultiplicationService, Dispatcher(), 'localhost', 6000)
+  server.serve()
 
 main()

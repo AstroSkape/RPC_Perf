@@ -41,8 +41,8 @@ COPY . /client
 
 WORKDIR /client
 
-RUN pip install thrift
+RUN pip install thriftpy2 thrift 
 
-RUN thrift --gen py ./mult.thrift
+RUN thrift --gen py mult.thrift
 
-CMD [ "python3", "client.py" ]
+CMD [ "python3", "client2.py" ]

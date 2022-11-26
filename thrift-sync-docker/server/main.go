@@ -1,8 +1,8 @@
 package main
 
 import (
-	"thrift-docker-sync/gen-go/tutorial"
-	"thrift-docker-sync/handler"
+	"thrift-sync-docker/gen-go/tutorial"
+	"thrift-sync-docker/handler"
 	"flag"
 	"log"
 

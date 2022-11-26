@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"thrift-docker-sync/gen-go/tutorial"
+	"thrift-sync-docker/gen-go/tutorial"
 	"context"
 	"strconv"
 	"strings"
@@ -75,5 +75,5 @@ func (p *Handler) Multiply(ctx context.Context, A string, B string, m1 tutorial.
 		}
 	}
 
-	return encode(arr, int(m1), int(n2)), nil
+	return encode(arr, int(m1), int(n2)), 1
 }

@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM python:3.9
 
 ENV THRIFT_VERSION v0.17.0
 
@@ -37,21 +37,23 @@ RUN buildDeps=" \
 	&& rm -rf /tmp/* \
 	&& rm -rf /var/tmp/*
 
-RUN apt-get update \
-    && apt-get install wget -y
+#RUN apt-get update \
+#    && apt-get install wget -y
 
-RUN wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
-RUN tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz 
-ENV PATH $PATH:/usr/local/go/bin
+#RUN wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
+#RUN tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz 
+#ENV PATH $PATH:/usr/local/go/bin
 
-COPY . .
+COPY . /server
 
-WORKDIR .
+WORKDIR /server
 
-RUN go mod tidy
+#RUN go mod tidy
 
-EXPOSE 9090
+#RUN thrift --gen go mult.thrift
 
-RUN thrift --gen go ./mult.thrift
+RUN pip install thriftpy2
 
-CMD [ "go", "run", "main.go" ]
+EXPOSE 6000
+
+CMD [ "python3", "main.py" ]
