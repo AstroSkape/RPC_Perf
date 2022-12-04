@@ -56,7 +56,7 @@ def main():
 	#subprocess.run(["bash", "cpu_usage.sh", str(pid)])
 	#os.system("bash cpu_usage.sh "+str(pid))
 	#print(resource.getrusage(resource.RUSAGE_SELF)[0], resource.getrusage(resource.RUSAGE_SELF)[1], resource.getrusage(resource.RUSAGE_SELF)[3], resource.getrusage(resource.RUSAGE_SELF)[4])
-	payload = '*'*10000000
+	payload = '*'*4194299
 	#result = client.multiply(payload)
 	with ThreadPoolExecutor() as executor:
 		monitor = MemoryMonitor()
@@ -68,12 +68,15 @@ def main():
 			monitor.keep_measuring = False
 			max_mem, max_user, max_sys = mem_thread.result()
 			
-		#print(f"Peak memory usage: {max_mem}kB")
-		#print(f"Peak user time: {max_user}s, Peak system time: {max_sys}s")
-		print(max_mem, max_user, max_sys)
+		print(f"Peak memory usage: {max_mem}kB")
+		print(f"Peak user time: {max_user}s, Peak system time: {max_sys}s")
+	profiler = Profiler()
+	profiler.start()
 	result = client.multiply(payload)
-	#print("Payload size:", len(payload))
-	#print(result)
+	session = profiler.stop()
+	print(ConsoleRenderer(unicode=True, color=True, show_all=True).render(session))
+	print("Payload size:", len(payload))
+	print(result)
 
 
 

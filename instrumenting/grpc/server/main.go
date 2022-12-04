@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 
-	pb "SSP_Project/profiling/grpc/calc"
+	pb "SSP_Project/instrumenting/grpc/calc"
 
 	"google.golang.org/grpc"
 )

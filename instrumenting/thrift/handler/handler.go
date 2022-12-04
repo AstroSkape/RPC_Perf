@@ -32,5 +32,5 @@ func (p *Handler) Multiply(ctx context.Context, A string) (val string, err error
 
 	return encode(arr, int(m1), int(n2)), nil*/
 
-	return val, nil
+	return "done", nil
 }

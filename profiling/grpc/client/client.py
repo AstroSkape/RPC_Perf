@@ -2,11 +2,15 @@ import logging
 
 import random
 import grpc
+import sys
 import mult_pb2
 import mult_pb2_grpc
 import os, resource
 from time import sleep
 from concurrent.futures import ThreadPoolExecutor
+from pyinstrument import Profiler
+from pyinstrument.session import Session
+from pyinstrument.renderers import ConsoleRenderer
 
 class MemoryMonitor:
 	def __init__(self):
@@ -35,10 +39,11 @@ class MemoryMonitor:
 		return max_mem, max_user, max_sys
 	
 def run():
-	print("Connecting ...")
+	#print("Connecting ...")
 	with grpc.insecure_channel('localhost:50051') as channel:
 		stub = mult_pb2_grpc.CalculatorStub(channel)
-		payload = '*'*1000000
+		size = int(sys.argv[1])
+		payload = '*'*size
 		#response = stub.Multiply(mult_pb2.CalcRequest(Mat1=payload))
 		with ThreadPoolExecutor() as executor:
 			monitor = MemoryMonitor()
@@ -50,11 +55,12 @@ def run():
 				monitor.keep_measuring = False
 				max_mem, max_user, max_sys = mem_thread.result()
 				
-			print(f"Peak memory usage: {max_mem}kB")
-			print(f"Peak user time: {max_user}s, Peak system time: {max_sys}s")
-	print("Value received: ", result.value)
+			#print(f"Peak memory usage: {max_mem}kB")
+			#print(f"Peak user time: {max_user}s, Peak system time: {max_sys}s")
+			print(max_mem, max_user, max_sys)
+	#print("Value received: ", result.value)
 
 
 if __name__ == '__main__':
-    logging.basicConfig()
-    run()
+	logging.basicConfig()
+	run()

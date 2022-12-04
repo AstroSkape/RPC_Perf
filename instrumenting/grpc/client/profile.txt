@@ -1,0 +1,31 @@
+Connecting ...
+Value received:  done
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 23:56:26  Samples:  50
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 0.059     CPU time: 0.057
+/   _/                      v4.4.0
+
+Program: client.py
+
+0.057 <module>  client.py:1
+├─ 0.038 <module>  grpc/__init__.py:1
+│     [96 frames hidden]  grpc, asyncio, ssl, <built-in>, enum,...
+├─ 0.009 run  client.py:8
+│  ├─ 0.005 _UnaryUnaryMultiCallable.__call__  grpc/_channel.py:937
+│  │     [9 frames hidden]  grpc, <built-in>
+│  ├─ 0.002 insecure_channel  grpc/__init__.py:1962
+│  │     [7 frames hidden]  grpc, <built-in>, abc
+│  └─ 0.002 [self]  None
+├─ 0.006 <module>  mult_pb2.py:1
+│  ├─ 0.003 <module>  google/protobuf/internal/builder.py:1
+│  │     [17 frames hidden]  google, re, sre_compile, sre_parse, i...
+│  ├─ 0.002 BuildTopDescriptorsAndMessages  google/protobuf/internal/builder.py:70
+│  │     [8 frames hidden]  google, calendar, datetime, <built-in>
+│  └─ 0.001 BufferedReader.read  None
+│        [2 frames hidden]  <built-in>
+└─ 0.004 <module>  logging/__init__.py:1
+      [24 frames hidden]  logging, <built-in>, string, re, sre_...
+
+To view this report with different options, run:
+    pyinstrument --load-prev 2022-11-15T23-56-26 [options]
+
