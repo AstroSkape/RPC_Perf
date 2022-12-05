@@ -1,0 +1,15 @@
+syntax = "proto3"; 
+
+package calc;
+
+service Calculator {
+    rpc Multiply (CalcRequest) returns (CalcReply) {}
+}
+
+message CalcRequest{ 
+    string Mat1=1;
+} 
+     
+message CalcReply{ 
+    string value=1; 
+}

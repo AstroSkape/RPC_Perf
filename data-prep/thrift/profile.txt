@@ -1,0 +1,43 @@
+Payload size: 1000000
+done
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 23:51:18  Samples:  25
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 0.029     CPU time: 0.027
+/   _/                      v4.4.0
+
+Program: client.py
+
+0.029 <module>  client.py:1
+├─ 0.011 <module>  thrift/transport/TSocket.py:1
+│     [57 frames hidden]  thrift, logging, traceback, re, sre_c...
+├─ 0.006 main  client.py:20
+│  ├─ 0.004 Client.multiply  mult/MultiplicationService.py:38
+│  │  ├─ 0.002 Client.send_multiply  mult/MultiplicationService.py:47
+│  │  │  ├─ 0.001 multiply_args.write  mult/MultiplicationService.py:154
+│  │  │  │  └─ 0.001 TBinaryProtocol.writeString  thrift/protocol/TProtocol.py:121
+│  │  │  │        [5 frames hidden]  thrift, <built-in>
+│  │  │  └─ 0.001 TFramedTransport.flush  thrift/transport/TTransport.py:294
+│  │  │        [4 frames hidden]  thrift, <built-in>
+│  │  └─ 0.002 Client.recv_multiply  mult/MultiplicationService.py:55
+│  │     └─ 0.002 TBinaryProtocol.readMessageBegin  thrift/protocol/TBinaryProtocol.py:133
+│  │           [9 frames hidden]  thrift, <built-in>
+│  └─ 0.002 [self]  None
+├─ 0.002 <module>  thrift/protocol/TBinaryProtocol.py:1
+│     [7 frames hidden]  thrift, <built-in>, six
+├─ 0.002 [self]  None
+├─ 0.002 <module>  pstats.py:1
+│     [8 frames hidden]  pstats, typing, enum
+├─ 0.002 TFramedTransport.open  thrift/transport/TTransport.py:272
+│     [13 frames hidden]  thrift, socket, encodings, re, sre_co...
+├─ 0.001 <module>  datetime.py:1
+│     [4 frames hidden]  datetime
+├─ 0.001 listdir  None
+│     [2 frames hidden]  <built-in>
+├─ 0.001 is_frozen  None
+│     [2 frames hidden]  <built-in>
+└─ 0.001 <module>  cProfile.py:1
+      [2 frames hidden]  cProfile
+
+To view this report with different options, run:
+    pyinstrument --load-prev 2022-11-15T23-51-18 [options]
+

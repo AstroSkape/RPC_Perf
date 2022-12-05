@@ -1,0 +1,1017 @@
+0 ----------------------- Packet (Length: 94)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 40
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Incomplete (0)
+	TCP Segment Len: 0
+	Sequence Number: 0    (relative sequence number)
+	Sequence Number (raw): 811040238
+	Next Sequence Number: 1    (relative sequence number)
+	Acknowledgment Number: 0
+	Acknowledgment number (raw): 0
+	1010 .... = Header Length: 40 bytes (10)
+	Flags: 0x002 (SYN)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...0 .... = Acknowledgment: Not set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..1. = Syn: Set
+	Expert Info (Chat/Sequence): Connection establish request (SYN): server port 50051
+	Connection establish request (SYN): server port 50051
+	Severity level: Chat
+	Group: Sequence
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ··········S·
+	Window: 65476
+	Calculated window size: 65476
+	Checksum: 0x0030 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+	TCP Option - Maximum segment size: 65476 bytes
+	Kind: Maximum Segment Size (2)
+	Length: 4
+	MSS Value: 65476
+	TCP Option - SACK permitted
+	TCP Option - Timestamps: TSval 10621708, TSecr 0
+	Timestamp value: 10621708
+	Timestamp echo reply: 0
+	TCP Option - No-Operation (NOP)
+	TCP Option - Window scale: 7 (multiply by 128)
+	Shift count: 7
+	Multiplier: 128
+	Timestamps
+	Time since first frame in this TCP stream: 0.000000000 seconds
+	Time since previous frame in this TCP stream: 0.000000000 seconds
+	Kind: SACK Permitted (4)
+	Kind: Time Stamp Option (8)
+	Kind: No-Operation (1)
+	Kind: Window Scale (3)
+	Length: 2
+	Length: 10
+	Length: 3
+
+1 ----------------------- Packet (Length: 94)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 0011 1100 1011 0000 1111 = Flow Label: 0x3cb0f
+	Payload Length: 40
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 50051
+	Destination Port: 51100
+	Stream index: 20
+	Conversation completeness: Incomplete, SYN_SENT (1)
+	TCP Segment Len: 0
+	Sequence Number: 0    (relative sequence number)
+	Sequence Number (raw): 2317414546
+	Next Sequence Number: 1    (relative sequence number)
+	Acknowledgment Number: 1    (relative ack number)
+	Acknowledgment number (raw): 811040239
+	1010 .... = Header Length: 40 bytes (10)
+	Flags: 0x012 (SYN, ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..1. = Syn: Set
+	Expert Info (Chat/Sequence): Connection establish acknowledge (SYN+ACK): server port 50051
+	Connection establish acknowledge (SYN+ACK): server port 50051
+	Severity level: Chat
+	Group: Sequence
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······A··S·
+	Window: 65464
+	Calculated window size: 65464
+	Checksum: 0x0030 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+	TCP Option - Maximum segment size: 65476 bytes
+	Kind: Maximum Segment Size (2)
+	Length: 4
+	MSS Value: 65476
+	TCP Option - SACK permitted
+	TCP Option - Timestamps: TSval 10621708, TSecr 10621708
+	Timestamp value: 10621708
+	Timestamp echo reply: 10621708
+	TCP Option - No-Operation (NOP)
+	TCP Option - Window scale: 7 (multiply by 128)
+	Shift count: 7
+	Multiplier: 128
+	Timestamps
+	Time since first frame in this TCP stream: 0.000010011 seconds
+	Time since previous frame in this TCP stream: 0.000010011 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 41
+	The RTT to ACK the segment was: 0.000010011 seconds
+	Kind: SACK Permitted (4)
+	Kind: Time Stamp Option (8)
+	Kind: No-Operation (1)
+	Kind: Window Scale (3)
+	Length: 2
+	Length: 10
+	Length: 3
+
+2 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Incomplete, CLIENT_ESTABLISHED (3)
+	TCP Segment Len: 0
+	Sequence Number: 1    (relative sequence number)
+	Sequence Number (raw): 811040239
+	Next Sequence Number: 1    (relative sequence number)
+	Acknowledgment Number: 1    (relative ack number)
+	Acknowledgment number (raw): 2317414547
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x010 (ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······A····
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621708, TSecr 10621708
+	Length: 10
+	Timestamp value: 10621708
+	Timestamp echo reply: 10621708
+	Timestamps
+	Time since first frame in this TCP stream: 0.000034690 seconds
+	Time since previous frame in this TCP stream: 0.000024679 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 42
+	The RTT to ACK the segment was: 0.000024679 seconds
+	iRTT: 0.000034690 seconds
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
+3 ----------------------- Packet (Length: 101)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 0011 1100 1011 0000 1111 = Flow Label: 0x3cb0f
+	Payload Length: 47
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 50051
+	Destination Port: 51100
+	Stream index: 20
+	Conversation completeness: Incomplete, ESTABLISHED (7)
+	TCP Segment Len: 15
+	Sequence Number: 1    (relative sequence number)
+	Sequence Number (raw): 2317414547
+	Next Sequence Number: 16    (relative sequence number)
+	Acknowledgment Number: 1    (relative ack number)
+	Acknowledgment number (raw): 811040239
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x018 (PSH, ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 1... = Push: Set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······AP···
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0037 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621708, TSecr 10621708
+	Length: 10
+	Timestamp value: 10621708
+	Timestamp echo reply: 10621708
+	Timestamps
+	Time since first frame in this TCP stream: 0.000217199 seconds
+	Time since previous frame in this TCP stream: 0.000182509 seconds
+	SEQ/ACK analysis
+	iRTT: 0.000034690 seconds
+	Bytes in flight: 15
+	Bytes sent since last PSH flag: 15
+	TCP payload (15 bytes)
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+DATA
+4 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 0
+	Sequence Number: 1    (relative sequence number)
+	Sequence Number (raw): 811040239
+	Next Sequence Number: 1    (relative sequence number)
+	Acknowledgment Number: 16    (relative ack number)
+	Acknowledgment number (raw): 2317414562
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x010 (ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······A····
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621708, TSecr 10621708
+	Length: 10
+	Timestamp value: 10621708
+	Timestamp echo reply: 10621708
+	Timestamps
+	Time since first frame in this TCP stream: 0.000244710 seconds
+	Time since previous frame in this TCP stream: 0.000027511 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 44
+	The RTT to ACK the segment was: 0.000027511 seconds
+	iRTT: 0.000034690 seconds
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
+5 ----------------------- Packet (Length: 439)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 385
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 353
+	Sequence Number: 1    (relative sequence number)
+	Sequence Number (raw): 811040239
+	Next Sequence Number: 354    (relative sequence number)
+	Acknowledgment Number: 16    (relative ack number)
+	Acknowledgment number (raw): 2317414562
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x018 (PSH, ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 1... = Push: Set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······AP···
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0189 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621709, TSecr 10621708
+	Length: 10
+	Timestamp value: 10621709
+	Timestamp echo reply: 10621708
+	Timestamps
+	Time since first frame in this TCP stream: 0.000531370 seconds
+	Time since previous frame in this TCP stream: 0.000286660 seconds
+	SEQ/ACK analysis
+	iRTT: 0.000034690 seconds
+	Bytes in flight: 353
+	Bytes sent since last PSH flag: 353
+	TCP payload (353 bytes)
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+DATA
+6 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 0011 1100 1011 0000 1111 = Flow Label: 0x3cb0f
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 50051
+	Destination Port: 51100
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 0
+	Sequence Number: 16    (relative sequence number)
+	Sequence Number (raw): 2317414562
+	Next Sequence Number: 16    (relative sequence number)
+	Acknowledgment Number: 354    (relative ack number)
+	Acknowledgment number (raw): 811040592
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x010 (ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······A····
+	Window: 510
+	Calculated window size: 65280
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621709, TSecr 10621709
+	Length: 10
+	Timestamp value: 10621709
+	Timestamp echo reply: 10621709
+	Timestamps
+	Time since first frame in this TCP stream: 0.000536505 seconds
+	Time since previous frame in this TCP stream: 0.000005135 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 46
+	The RTT to ACK the segment was: 0.000005135 seconds
+	iRTT: 0.000034690 seconds
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
+7 ----------------------- Packet (Length: 201)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 0011 1100 1011 0000 1111 = Flow Label: 0x3cb0f
+	Payload Length: 147
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 50051
+	Destination Port: 51100
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 115
+	Sequence Number: 16    (relative sequence number)
+	Sequence Number (raw): 2317414562
+	Next Sequence Number: 131    (relative sequence number)
+	Acknowledgment Number: 354    (relative ack number)
+	Acknowledgment number (raw): 811040592
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x018 (PSH, ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 1... = Push: Set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······AP···
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x009b [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621709, TSecr 10621709
+	Length: 10
+	Timestamp value: 10621709
+	Timestamp echo reply: 10621709
+	Timestamps
+	Time since first frame in this TCP stream: 0.000689670 seconds
+	Time since previous frame in this TCP stream: 0.000153165 seconds
+	SEQ/ACK analysis
+	iRTT: 0.000034690 seconds
+	Bytes in flight: 115
+	Bytes sent since last PSH flag: 115
+	TCP payload (115 bytes)
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+DATA
+8 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 0
+	Sequence Number: 354    (relative sequence number)
+	Sequence Number (raw): 811040592
+	Next Sequence Number: 354    (relative sequence number)
+	Acknowledgment Number: 131    (relative ack number)
+	Acknowledgment number (raw): 2317414677
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x010 (ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······A····
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621709, TSecr 10621709
+	Length: 10
+	Timestamp value: 10621709
+	Timestamp echo reply: 10621709
+	Timestamps
+	Time since first frame in this TCP stream: 0.000710603 seconds
+	Time since previous frame in this TCP stream: 0.000020933 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 48
+	The RTT to ACK the segment was: 0.000020933 seconds
+	iRTT: 0.000034690 seconds
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
+9 ----------------------- Packet (Length: 116)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 62
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 30
+	Sequence Number: 354    (relative sequence number)
+	Sequence Number (raw): 811040592
+	Next Sequence Number: 384    (relative sequence number)
+	Acknowledgment Number: 131    (relative ack number)
+	Acknowledgment number (raw): 2317414677
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x018 (PSH, ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 1... = Push: Set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······AP···
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0046 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621712, TSecr 10621709
+	Length: 10
+	Timestamp value: 10621712
+	Timestamp echo reply: 10621709
+	Timestamps
+	Time since first frame in this TCP stream: 0.004284573 seconds
+	Time since previous frame in this TCP stream: 0.003573970 seconds
+	SEQ/ACK analysis
+	iRTT: 0.000034690 seconds
+	Bytes in flight: 30
+	Bytes sent since last PSH flag: 30
+	TCP payload (30 bytes)
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+DATA
+10 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 0011 1100 1011 0000 1111 = Flow Label: 0x3cb0f
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 50051
+	Destination Port: 51100
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 0
+	Sequence Number: 131    (relative sequence number)
+	Sequence Number (raw): 2317414677
+	Next Sequence Number: 131    (relative sequence number)
+	Acknowledgment Number: 384    (relative ack number)
+	Acknowledgment number (raw): 811040622
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x010 (ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······A····
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621712, TSecr 10621712
+	Length: 10
+	Timestamp value: 10621712
+	Timestamp echo reply: 10621712
+	Timestamps
+	Time since first frame in this TCP stream: 0.004294502 seconds
+	Time since previous frame in this TCP stream: 0.000009929 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 50
+	The RTT to ACK the segment was: 0.000009929 seconds
+	iRTT: 0.000034690 seconds
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
+11 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Incomplete, DATA (15)
+	TCP Segment Len: 0
+	Sequence Number: 384    (relative sequence number)
+	Sequence Number (raw): 811040622
+	Next Sequence Number: 385    (relative sequence number)
+	Acknowledgment Number: 131    (relative ack number)
+	Acknowledgment number (raw): 2317414677
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x011 (FIN, ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...1 = Fin: Set
+	Expert Info (Chat/Sequence): Connection finish (FIN)
+	Connection finish (FIN)
+	Severity level: Chat
+	Group: Sequence
+	TCP Flags: ·······A···F
+	This frame initiates the connection closing
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621713, TSecr 10621712
+	Length: 10
+	Timestamp value: 10621713
+	Timestamp echo reply: 10621712
+	Timestamps
+	Time since first frame in this TCP stream: 0.004377798 seconds
+	Time since previous frame in this TCP stream: 0.000083296 seconds
+	Expert Info (Note/Sequence): This frame initiates the connection closing
+	Severity level: Note
+	Group: Sequence
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
+12 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 0011 1100 1011 0000 1111 = Flow Label: 0x3cb0f
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 50051
+	Destination Port: 51100
+	Stream index: 20
+	Conversation completeness: Complete, WITH_DATA (31)
+	TCP Segment Len: 0
+	Sequence Number: 131    (relative sequence number)
+	Sequence Number (raw): 2317414677
+	Next Sequence Number: 132    (relative sequence number)
+	Acknowledgment Number: 385    (relative ack number)
+	Acknowledgment number (raw): 811040623
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x011 (FIN, ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...1 = Fin: Set
+	Expert Info (Chat/Sequence): Connection finish (FIN)
+	Connection finish (FIN)
+	Severity level: Chat
+	Group: Sequence
+	TCP Flags: ·······A···F
+	This frame undergoes the connection closing
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621713, TSecr 10621713
+	Length: 10
+	Timestamp value: 10621713
+	Timestamp echo reply: 10621713
+	Timestamps
+	Time since first frame in this TCP stream: 0.004404789 seconds
+	Time since previous frame in this TCP stream: 0.000026991 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 52
+	The RTT to ACK the segment was: 0.000026991 seconds
+	iRTT: 0.000034690 seconds
+	Expert Info (Note/Sequence): This frame undergoes the connection closing
+	Severity level: Note
+	Group: Sequence
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
+13 ----------------------- Packet (Length: 86)
+Layer ETH:
+	Destination: 00:00:00:00:00:00
+	Address: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 00:00:00:00:00:00
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 00:00:00:00:00:00
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... 1001 1101 0101 1001 1011 = Flow Label: 0x9d59b
+	Payload Length: 32
+	Next Header: TCP (6)
+	Hop Limit: 64
+	Source Address: ::1
+	Destination Address: ::1
+Layer TCP:
+	Source Port: 51100
+	Destination Port: 50051
+	Stream index: 20
+	Conversation completeness: Complete, WITH_DATA (31)
+	TCP Segment Len: 0
+	Sequence Number: 385    (relative sequence number)
+	Sequence Number (raw): 811040623
+	Next Sequence Number: 385    (relative sequence number)
+	Acknowledgment Number: 132    (relative ack number)
+	Acknowledgment number (raw): 2317414678
+	1000 .... = Header Length: 32 bytes (8)
+	Flags: 0x010 (ACK)
+	000. .... .... = Reserved: Not set
+	...0 .... .... = Nonce: Not set
+	.... 0... .... = Congestion Window Reduced (CWR): Not set
+	.... .0.. .... = ECN-Echo: Not set
+	.... ..0. .... = Urgent: Not set
+	.... ...1 .... = Acknowledgment: Set
+	.... .... 0... = Push: Not set
+	.... .... .0.. = Reset: Not set
+	.... .... ..0. = Syn: Not set
+	.... .... ...0 = Fin: Not set
+	TCP Flags: ·······A····
+	Window: 512
+	Calculated window size: 65536
+	Window size scaling factor: 128
+	Checksum: 0x0028 [unverified]
+	Checksum Status: Unverified
+	Urgent Pointer: 0
+	Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	TCP Option - Timestamps: TSval 10621713, TSecr 10621713
+	Length: 10
+	Timestamp value: 10621713
+	Timestamp echo reply: 10621713
+	Timestamps
+	Time since first frame in this TCP stream: 0.004411448 seconds
+	Time since previous frame in this TCP stream: 0.000006659 seconds
+	SEQ/ACK analysis
+	This is an ACK to the segment in frame: 53
+	The RTT to ACK the segment was: 0.000006659 seconds
+	iRTT: 0.000034690 seconds
+	TCP Option - No-Operation (NOP)
+	Kind: No-Operation (1)
+	Kind: Time Stamp Option (8)
+
