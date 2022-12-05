@@ -17,7 +17,7 @@ from thrift.protocol import TBinaryProtocol
 #from contact import ContactSvc, ttypes
 from mult import MultiplicationService, ttypes
 	
-socket = TSocket.TSocket('192.168.100.4', 9090)
+socket = TSocket.TSocket('localhost', 9090)
 transport = TTransport.TFramedTransport(socket)
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
 client = MultiplicationService.Client(protocol)
@@ -78,7 +78,7 @@ def main():
 def main_cpuusage():
 	payload = '*'*size
 	pid = os.getpid()
-	for i in range(100):
+	for i in range(1000):
 		result = client.multiply(payload)
 	os.system("bash ../cpuusage.sh {}".format(pid))
 	
@@ -88,8 +88,8 @@ if __name__ == '__main__':
 	#profiler = cProfile.Profile()
 	#profiler.enable()
 	
-	#main()
-	main_cpuusage()
+	main()
+	#main_cpuusage()
 	
 	#profiler.disable()
 	#stats = pstats.Stats(profiler).sort_stats('cumtime')

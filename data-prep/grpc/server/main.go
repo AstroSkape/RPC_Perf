@@ -26,7 +26,7 @@ func (s *server) Multiply(ctx context.Context, in *pb.CalcRequest) (*pb.CalcRepl
 
 func main() {
 	flag.Parse()
-	lis, err := net.Listen("tcp", fmt.Sprintf("192.168.100.4:%d", *port))
+	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}

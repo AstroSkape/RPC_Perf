@@ -4,7 +4,7 @@ from datetime import datetime
 import random
 sys.path.append('gen-py')
 import cProfile, pstats
-import pyshark
+#import pyshark
 from thrift.transport import TSocket, TTransport
 from thrift.protocol import TBinaryProtocol
 #from contact import ContactSvc, ttypes
@@ -25,9 +25,10 @@ def main():
 	payload = '*'*times
 	profiler = Profiler()
 	profiler.start()
-	result = client.multiply(payload)
+	for i in range(1000):
+		result = client.multiply(payload)
 	session = profiler.stop()
-	print(ConsoleRenderer(unicode=True, color=False, show_all=True).render(session))
+	print(ConsoleRenderer(unicode=True, color=True, show_all=True).render(session))
 	print("Payload size:", len(payload))
 	print(result)
 

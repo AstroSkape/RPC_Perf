@@ -24,7 +24,7 @@ func RunServer(transportFactory thrift.TTransportFactory, protocolFactory thrift
 }
 
 var (
-	addr = flag.String("addr", "192.168.100.4:9090", "Thrift Address to listen on")
+	addr = flag.String("addr", ":9090", "Thrift Address to listen on")
 )
 
 func main() {

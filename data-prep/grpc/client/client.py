@@ -16,9 +16,10 @@ def run():
 		payload = '*'*times
 		profiler = Profiler()
 		profiler.start()
-		response = stub.Multiply(mult_pb2.CalcRequest(Mat1=payload))
+		for i in range(1000):
+			response = stub.Multiply(mult_pb2.CalcRequest(Mat1=payload))
 		session = profiler.stop()
-		print(ConsoleRenderer(unicode=True, color=False, show_all=True).render(session))
+		print(ConsoleRenderer(unicode=True, color=True, show_all=True).render(session))
 	print("Value received: ", response.value)
 
 
