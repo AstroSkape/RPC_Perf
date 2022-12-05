@@ -17,7 +17,7 @@ from thrift.protocol import TBinaryProtocol
 #from contact import ContactSvc, ttypes
 from mult import MultiplicationService, ttypes
 	
-socket = TSocket.TSocket('localhost', 9090)
+socket = TSocket.TSocket('192.168.100.4', 9090)
 transport = TTransport.TFramedTransport(socket)
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
 client = MultiplicationService.Client(protocol)

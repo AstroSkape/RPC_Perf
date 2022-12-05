@@ -17,13 +17,13 @@ from thrift.protocol import TBinaryProtocol
 #from contact import ContactSvc, ttypes
 from mult import MultiplicationService, ttypes
 	
-socket = TSocket.TSocket('localhost', 9090)
+socket = TSocket.TSocket('192.168.100.4', 9090)
 transport = TTransport.TFramedTransport(socket)
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
 client = MultiplicationService.Client(protocol)
 
 transport.open()
-
+size = int(sys.argv[1])
 class MemoryMonitor:
 	def __init__(self):
 		self.keep_measuring = True
@@ -56,7 +56,7 @@ def main():
 	#subprocess.run(["bash", "cpu_usage.sh", str(pid)])
 	#os.system("bash cpu_usage.sh "+str(pid))
 	#print(resource.getrusage(resource.RUSAGE_SELF)[0], resource.getrusage(resource.RUSAGE_SELF)[1], resource.getrusage(resource.RUSAGE_SELF)[3], resource.getrusage(resource.RUSAGE_SELF)[4])
-	payload = '*'*10000000
+	payload = '*'*size
 	#result = client.multiply(payload)
 	with ThreadPoolExecutor() as executor:
 		monitor = MemoryMonitor()
@@ -75,13 +75,22 @@ def main():
 	#print("Payload size:", len(payload))
 	#print(result)
 
-
+def main_cpuusage():
+	payload = '*'*size
+	pid = os.getpid()
+	for i in range(100):
+		result = client.multiply(payload)
+	os.system("bash ../cpuusage.sh {}".format(pid))
+	
 
 if __name__ == '__main__':
 	
 	#profiler = cProfile.Profile()
 	#profiler.enable()
-	main()
+	
+	#main()
+	main_cpuusage()
+	
 	#profiler.disable()
 	#stats = pstats.Stats(profiler).sort_stats('cumtime')
 	#stats.print_stats()

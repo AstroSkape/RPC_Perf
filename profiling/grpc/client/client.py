@@ -11,6 +11,9 @@ from concurrent.futures import ThreadPoolExecutor
 from pyinstrument import Profiler
 from pyinstrument.session import Session
 from pyinstrument.renderers import ConsoleRenderer
+import cProfile, pstats
+import resource, psutil
+from time import sleep
 
 class MemoryMonitor:
 	def __init__(self):
@@ -40,7 +43,7 @@ class MemoryMonitor:
 	
 def run():
 	#print("Connecting ...")
-	with grpc.insecure_channel('localhost:50051') as channel:
+	with grpc.insecure_channel('192.168.100.4:50051') as channel:
 		stub = mult_pb2_grpc.CalculatorStub(channel)
 		size = int(sys.argv[1])
 		payload = '*'*size
@@ -60,7 +63,17 @@ def run():
 			print(max_mem, max_user, max_sys)
 	#print("Value received: ", result.value)
 
+def cpuusage_run():
+	with grpc.insecure_channel('192.168.100.4:50051') as channel:
+		size = int(sys.argv[1])
+		stub = mult_pb2_grpc.CalculatorStub(channel)
+		payload = '*'*size
+		pid = os.getpid()
+		for i in range(100):
+			response = stub.Multiply(mult_pb2.CalcRequest(Mat1=payload))
+		os.system("bash ../cpuusage.sh {}".format(pid))
 
 if __name__ == '__main__':
 	logging.basicConfig()
-	run()
+	#run()
+	cpuusage_run()
