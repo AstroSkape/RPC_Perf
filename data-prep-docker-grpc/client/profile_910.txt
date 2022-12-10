@@ -1,0 +1,19 @@
+Connecting ...
+910
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 11:43:36  Samples:  294
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 0.401     CPU time: 0.307
+/   _/                      v4.4.0
+
+Program: client.py 910
+
+0.400 run  client.py:10
+├─ 0.394 _UnaryUnaryMultiCallable.__call__  grpc/_channel.py:937
+│  └─ 0.391 _UnaryUnaryMultiCallable._blocking  grpc/_channel.py:919
+│     ├─ 0.364 [self]  None
+│     ├─ 0.010 _UnaryUnaryMultiCallable._prepare  grpc/_channel.py:897
+│     └─ 0.004 Channel.segregated_call  None
+└─ 0.006 [self]  None
+
+
+Value received:  done

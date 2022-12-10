@@ -1,7 +1,7 @@
 FROM python:3.9
 
-RUN pip install grpcio-tools pyshark pyinstrument
+RUN pip install grpcio-tools pyinstrument
 
 COPY . .
 
-CMD [ "python3", "client.py", "1000" ]
+CMD [ "bash", "payload.sh" ]

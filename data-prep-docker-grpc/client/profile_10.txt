@@ -1,0 +1,28 @@
+Connecting ...
+10
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 11:43:14  Samples:  312
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 0.404     CPU time: 0.409
+/   _/                      v4.4.0
+
+Program: client.py 10
+
+0.404 run  client.py:10
+├─ 0.399 _UnaryUnaryMultiCallable.__call__  grpc/_channel.py:937
+│  └─ 0.395 _UnaryUnaryMultiCallable._blocking  grpc/_channel.py:919
+│     ├─ 0.309 [self]  None
+│     ├─ 0.039 Condition.__enter__  threading.py:256
+│     │  └─ 0.035 [self]  None
+│     ├─ 0.024 _UnaryUnaryMultiCallable._prepare  grpc/_channel.py:897
+│     │  ├─ 0.014 _RPCState.__init__  grpc/_channel.py:95
+│     │  │  └─ 0.008 get_fork_epoch  None
+│     │  └─ 0.005 [self]  None
+│     └─ 0.019 _handle_event  grpc/_channel.py:135
+│        ├─ 0.011 [self]  None
+│        └─ 0.006 deserialize  grpc/_common.py:100
+│           └─ 0.006 _transform  grpc/_common.py:83
+│              └─ 0.006 CalcReply.FromString  None
+└─ 0.005 [self]  None
+
+
+Value received:  done

@@ -1,0 +1,26 @@
+Connecting ...
+810
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 11:43:34  Samples:  316
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 0.340     CPU time: 0.239
+/   _/                      v4.4.0
+
+Program: client.py 810
+
+0.339 run  client.py:10
+├─ 0.332 _UnaryUnaryMultiCallable.__call__  grpc/_channel.py:937
+│  └─ 0.330 _UnaryUnaryMultiCallable._blocking  grpc/_channel.py:919
+│     ├─ 0.284 [self]  None
+│     ├─ 0.019 _UnaryUnaryMultiCallable._prepare  grpc/_channel.py:897
+│     │  ├─ 0.010 [self]  None
+│     │  └─ 0.006 _RPCState.__init__  grpc/_channel.py:95
+│     │     └─ 0.004 [self]  None
+│     ├─ 0.013 _handle_event  grpc/_channel.py:135
+│     │  ├─ 0.007 [self]  None
+│     │  └─ 0.004 deserialize  grpc/_common.py:100
+│     ├─ 0.005 Condition.__enter__  threading.py:256
+│     └─ 0.004 Condition.notify_all  threading.py:381
+└─ 0.007 [self]  None
+
+
+Value received:  done
