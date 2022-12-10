@@ -1,7 +1,6 @@
 FROM alpine
 
 USER root
-RUN addgroup root wireshark
 RUN mkdir /root/tshark
 RUN apk --update --no-cache add tshark
 RUN apk add bash
@@ -17,6 +16,6 @@ RUN pip install thrift pyinstrument pyshark
 
 RUN sed -i 's/\r//' payload.sh
 
-RUN chmod a+x /usr/bin/dumpcap
+RUN chmod +x /usr/bin/dumpcap
 
 CMD [ "bash", "./payload.sh" ]

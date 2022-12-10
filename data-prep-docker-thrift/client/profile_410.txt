@@ -1,0 +1,56 @@
+410
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 11:31:57  Samples:  329
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 0.342     CPU time: 0.240
+/   _/                      v4.4.0
+
+Program: client.py 410
+
+0.342 main  client.py:22
+└─ 0.341 Client.multiply  mult/MultiplicationService.py:38
+   ├─ 0.248 Client.recv_multiply  mult/MultiplicationService.py:55
+   │  ├─ 0.210 TBinaryProtocol.readMessageBegin  thrift/protocol/TBinaryProtocol.py:133
+   │  │  ├─ 0.198 TBinaryProtocol.readI32  thrift/protocol/TBinaryProtocol.py:216
+   │  │  │  └─ 0.194 TFramedTransport.readAll  thrift/transport/TTransport.py:58
+   │  │  │     └─ 0.191 TFramedTransport.read  thrift/transport/TTransport.py:278
+   │  │  │        ├─ 0.183 TFramedTransport.readFrame  thrift/transport/TTransport.py:286
+   │  │  │        │  ├─ 0.178 TSocket.readAll  thrift/transport/TTransport.py:58
+   │  │  │        │  │  ├─ 0.173 TSocket.read  thrift/transport/TSocket.py:148
+   │  │  │        │  │  │  ├─ 0.168 socket.recv  None
+   │  │  │        │  │  │  └─ 0.004 [self]  None
+   │  │  │        │  │  └─ 0.004 [self]  None
+   │  │  │        │  └─ 0.004 unpack  None
+   │  │  │        └─ 0.005 [self]  None
+   │  │  └─ 0.009 TBinaryProtocol.readString  thrift/protocol/TProtocol.py:184
+   │  │     └─ 0.008 TBinaryProtocol.readBinary  thrift/protocol/TBinaryProtocol.py:231
+   │  │        └─ 0.004 TBinaryProtocol.readI32  thrift/protocol/TBinaryProtocol.py:216
+   │  │           └─ 0.004 TFramedTransport.readAll  thrift/transport/TTransport.py:58
+   │  ├─ 0.032 multiply_result.read  mult/MultiplicationService.py:197
+   │  │  ├─ 0.012 TBinaryProtocol.readFieldBegin  thrift/protocol/TBinaryProtocol.py:162
+   │  │  │  └─ 0.007 TBinaryProtocol.readByte  thrift/protocol/TBinaryProtocol.py:206
+   │  │  │     └─ 0.004 TFramedTransport.readAll  thrift/transport/TTransport.py:58
+   │  │  ├─ 0.011 TBinaryProtocol.readString  thrift/protocol/TProtocol.py:184
+   │  │  │  └─ 0.010 TBinaryProtocol.readBinary  thrift/protocol/TBinaryProtocol.py:231
+   │  │  │     └─ 0.004 TBinaryProtocol.readI32  thrift/protocol/TBinaryProtocol.py:216
+   │  │  │        └─ 0.004 TFramedTransport.readAll  thrift/transport/TTransport.py:58
+   │  │  └─ 0.008 [self]  None
+   │  └─ 0.006 [self]  None
+   ├─ 0.088 Client.send_multiply  mult/MultiplicationService.py:47
+   │  ├─ 0.059 TFramedTransport.flush  thrift/transport/TTransport.py:294
+   │  │  ├─ 0.054 TSocket.write  thrift/transport/TSocket.py:170
+   │  │  │  ├─ 0.048 socket.send  None
+   │  │  │  └─ 0.006 [self]  None
+   │  │  └─ 0.004 [self]  None
+   │  ├─ 0.015 TBinaryProtocol.writeMessageBegin  thrift/protocol/TBinaryProtocol.py:52
+   │  │  ├─ 0.006 TBinaryProtocol.writeString  thrift/protocol/TProtocol.py:121
+   │  │  │  └─ 0.005 TBinaryProtocol.writeBinary  thrift/protocol/TBinaryProtocol.py:129
+   │  │  ├─ 0.005 TBinaryProtocol.writeI32  thrift/protocol/TBinaryProtocol.py:117
+   │  │  └─ 0.004 [self]  None
+   │  └─ 0.012 multiply_args.write  mult/MultiplicationService.py:154
+   │     └─ 0.005 TBinaryProtocol.writeFieldBegin  thrift/protocol/TBinaryProtocol.py:71
+   │        └─ 0.005 TBinaryProtocol.writeI16  thrift/protocol/TBinaryProtocol.py:113
+   └─ 0.005 [self]  None
+
+
+Payload size: 410
+done
