@@ -51,13 +51,13 @@ def gen_load(step):
         for i in range(m1):
             M1.append([])
             for j in range(n1):
-                M1[i].append(random.randint(1,99))
+                M1[i].append(random.randint(10,99))
 	
         M2 = []
         for i in range(m2):
             M2.append([])
             for j in range(n2):
-                M2[i].append(random.randint(1,99))
+                M2[i].append(random.randint(10,99))
 		
         yield m1, n1, m2, n2, encode(M1, m1, n1), encode(M2, m2, n2)
 

@@ -45,4 +45,4 @@ RUN pip install thriftpy2 thrift
 
 RUN thrift --gen py mult.thrift
 
-CMD [ "python3", "client2.py" ]
+CMD [ "python3", "client.py" ]

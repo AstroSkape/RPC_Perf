@@ -1,10 +1,10 @@
 package main
 
 import (
-	"thrift-sync-docker/gen-go/tutorial"
-	"thrift-sync-docker/handler"
 	"flag"
 	"log"
+	"thrift-sync-docker/gen-go/tutorial"
+	"thrift-sync-docker/handler"
 
 	"github.com/apache/thrift/lib/go/thrift"
 )
@@ -24,7 +24,7 @@ func RunServer(transportFactory thrift.TTransportFactory, protocolFactory thrift
 }
 
 var (
-	addr = flag.String("addr", "localhost:9090", "Thrift Address to listen on")
+	addr = flag.String("addr", "172.17.0.2:6000", "Thrift Address to listen on")
 )
 
 func main() {

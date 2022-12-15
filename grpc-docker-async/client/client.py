@@ -41,18 +41,20 @@ def gen_load(step):
 	n2 = n1 = 5
 	m1 = 0
 	while True:
+		if m1 == 49940:
+			break
 		m1 += step
 		M1 = []
 		for i in range(m1):
 			M1.append([])
 			for j in range(n1):
-				M1[i].append(random.randint(1,99))
+				M1[i].append(random.randint(10,99))
 	
 		M2 = []
 		for i in range(m2):
 			M2.append([])
 			for j in range(n2):
-				M2[i].append(random.randint(1,99))
+				M2[i].append(random.randint(10,99))
 		
 		yield m1, n1, m2, n2, encode(M1, m1, n1), encode(M2, m2, n2)
 
@@ -61,13 +63,13 @@ def test_case(m1, m2, n1, n2):
 	for i in range(m1):
 		M1.append([])
 		for j in range(n1):
-			M1[i].append(random.randint(1,99))
+			M1[i].append(random.randint(10,99))
 
 	M2 = []
 	for i in range(m2):
 		M2.append([])
 		for j in range(n2):
-			M2[i].append(random.randint(1,99))
+			M2[i].append(random.randint(10,99))
 	
 	return encode(M1, m1, n1), encode(M2, m2, n2)
 
@@ -84,8 +86,8 @@ def run():
 		delta = (end - start)
 		print(m1, delta, len(s1)+len(s2)+4*4)
 		#print("Value received: ", decode(response.value))
-	s1, s2 = test_case(49940, 5, 5, 5)
-	response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=49940, n1=5, m2=5, n2=5))
+	#s1, s2 = test_case(49940, 5, 5, 5)
+	#response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=49940, n1=5, m2=5, n2=5))
 
 
 if __name__ == '__main__':

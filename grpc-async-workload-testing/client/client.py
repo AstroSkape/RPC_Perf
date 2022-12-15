@@ -41,6 +41,8 @@ def gen_load(step):
 	n2 = n1 = 5
 	m1 = 0
 	while True:
+		if m1==13200:
+			break
 		m1 += step
 		M1 = []
 		for i in range(m1):

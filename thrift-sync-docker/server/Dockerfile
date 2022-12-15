@@ -37,23 +37,23 @@ RUN buildDeps=" \
 	&& rm -rf /tmp/* \
 	&& rm -rf /var/tmp/*
 
-#RUN apt-get update \
-#    && apt-get install wget -y
+RUN apt-get update \
+    && apt-get install wget -y
 
-#RUN wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
-#RUN tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz 
-#ENV PATH $PATH:/usr/local/go/bin
+RUN wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz 
+ENV PATH $PATH:/usr/local/go/bin
 
 COPY . /server
 
 WORKDIR /server
 
-#RUN go mod tidy
+RUN go mod tidy
 
-#RUN thrift --gen go mult.thrift
+RUN thrift --gen go mult.thrift
 
-RUN pip install thriftpy2
+#RUN pip install thriftpy2
 
 EXPOSE 6000
 
-CMD [ "python3", "main.py" ]
+CMD [ "go", "run", "main.go" ]

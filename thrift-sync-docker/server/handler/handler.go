@@ -1,10 +1,11 @@
 package handler
 
 import (
-	"thrift-sync-docker/gen-go/tutorial"
 	"context"
+	"fmt"
 	"strconv"
 	"strings"
+	"thrift-sync-docker/gen-go/tutorial"
 )
 
 type Handler struct{}
@@ -57,7 +58,7 @@ func encode(arr [][]int, m int, n int) string {
 }
 
 func (p *Handler) Multiply(ctx context.Context, A string, B string, m1 tutorial.Int, n1 tutorial.Int, m2 tutorial.Int, n2 tutorial.Int) (val string, err error) {
-	//fmt.Println("In multiply...");
+	fmt.Println("In multiply..." + A + "," + B)
 	M1 := decode(A)
 	M2 := decode(B)
 
@@ -75,5 +76,5 @@ func (p *Handler) Multiply(ctx context.Context, A string, B string, m1 tutorial.
 		}
 	}
 
-	return encode(arr, int(m1), int(n2)), 1
+	return encode(arr, int(m1), int(n2)), nil
 }
