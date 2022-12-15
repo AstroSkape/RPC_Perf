@@ -41,7 +41,7 @@ def gen_load(step):
 	n2 = n1 = 5
 	m1 = 0
 	while True:
-		if m1==13200:
+		if m1 == 49940:
 			break
 		m1 += step
 		M1 = []
@@ -76,18 +76,18 @@ def test_case(m1, m2, n1, n2):
 
 	
 def run():
-	print("Connecting ...")
+	#print("Connecting ...")
 	channel =  grpc.aio.insecure_channel('localhost:50051')
 	stub = mult_pb2_grpc.CalculatorStub(channel)
-	'''for m1, n1, m2, n2, s1, s2 in gen_load(10):	
+	for m1, n1, m2, n2, s1, s2 in gen_load(10):	
 		start = timer()
 		response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=m1, n1=n1, m2=m2, n2=n2))
 		end = timer()
 		delta = (end - start)
 		print(m1, delta, len(s1)+len(s2)+4*4)
-		#print("Value received: ", decode(response.value))'''
-	s1, s2 = test_case(49940, 5, 5, 5)
-	response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=49940, n1=5, m2=5, n2=5))
+		#print("Value received: ", decode(response.value))
+	#s1, s2 = test_case(49940, 5, 5, 5)
+	#response = stub.Multiply(mult_pb2.CalcRequest(Mat1=s1, Mat2=s2, m1=49940, n1=5, m2=5, n2=5))
 
 
 if __name__ == '__main__':
